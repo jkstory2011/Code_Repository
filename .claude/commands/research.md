@@ -30,10 +30,10 @@ argument-hint: <카테고리> <주제>
    cd "g:/workspace/Vault_Storage" && node _dashboard/scan.js .
    ```
 
-6. 변경된 파일(새 노트 + `_dashboard/graph-data.js`)을 커밋한다:
+6. 변경된 파일만 정확히 지정해서 커밋한다 (Vault_Storage는 obsidian-git 플러그인이 계속 자동 커밋 중이므로, `git add -A`로 전체를 스테이징하면 무관한 진행 중인 다른 노트까지 같이 커밋되거나 `.git/index.lock` 충돌이 날 수 있다 — 반드시 아래처럼 이 작업에서 만든 두 파일만 지정한다):
 
    ```bash
-   cd "g:/workspace/Vault_Storage" && git add -A && git commit -m "지식 노트 추가: <카테고리>/<주제>"
+   cd "g:/workspace/Vault_Storage" && git add "<카테고리>/<오늘날짜 YYYY-MM-DD>-<주제 요약>.md" _dashboard/graph-data.js && git commit -m "지식 노트 추가: <카테고리>/<주제>"
    ```
 
 7. 사용자에게 저장된 노트 경로를 알려준다.
